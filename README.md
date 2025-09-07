@@ -1,12 +1,32 @@
-# React + Vite
+# 🎬 GIPHY Clone – React + Tailwind + Context API  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured **GIPHY Clone** built with **React.js**, **Tailwind CSS**, and **Context API** for global state management.  
+This app integrates the **GIPHY API** to explore trending GIFs, categories, and search results. Users can also manage their favorite GIFs and enjoy a modern responsive UI.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features  
+- ⚡ **React + Vite** setup with Tailwind CSS styling  
+- 🛣️ **React Router** for page navigation  
+- 🌐 **GIPHY API Integration** (Trending, Categories, Search)  
+- 🎛️ **Filter & Search** functionality for GIFs  
+- 💾 **Favorites Management** using Context API  
+- 📱 **Responsive UI** with Tailwind  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack  
+- **React.js** – Frontend library  
+- **Tailwind CSS** – Utility-first CSS framework  
+- **React Router** – Client-side routing  
+- **Context API** – State management  
+- **GIPHY API** – Data source  
+
+---
+
+## 🎯 Pages & Functionality  
+- **Home Page** – Display trending GIFs  
+- **Search Page** – Find GIFs by keywords  
+- **Categories Page** – Explore different categories  
+- **GIF Detail Page** – View a single GIF with related ones  
+- **Favorites Page** – Save & manage favorite GIFs   
