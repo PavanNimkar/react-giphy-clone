@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { HiDotsVertical } from "react-icons/hi";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
+import { GifState } from "../context/gif-context";
 
 export const Header = () => {
   const [categories, setCategories] = useState([]);
+  const { gif_value, filter, setFilter, favourites } = GifState();
   const [showCategories, setShowCategories] = useState(false);
   return (
     <nav>

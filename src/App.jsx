@@ -6,6 +6,7 @@ import { search as SearchPage } from "./layouts/search";
 import { singleGif as GifPage } from "./layouts/single-gif";
 import { favourites as Favourites } from "./layouts/favourites";
 import { category as CategoryPage } from "./layouts/category";
+import GifProvider from "./context/gif-context";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <GifProvider>
+      <RouterProvider router={router} />;
+    </GifProvider>
+  );
 }
 
 export default App;
