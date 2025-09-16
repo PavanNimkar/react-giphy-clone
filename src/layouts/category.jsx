@@ -1,5 +1,5 @@
 import React from "react";
 
-export const category = () => {
+export const Category = () => {
   return <div>category</div>;
 };

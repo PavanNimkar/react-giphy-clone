@@ -1,5 +1,5 @@
 import React from "react";
 
-export const singleGif = () => {
+export const SingleGif = () => {
   return <div>singleGif</div>;
 };

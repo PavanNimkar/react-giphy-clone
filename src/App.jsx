@@ -1,12 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import { AppLayout } from "./layouts/app-layout";
-import { home as Home } from "./layouts/home";
-import { search as SearchPage } from "./layouts/search";
-import { singleGif as GifPage } from "./layouts/single-gif";
-import { favourites as Favourites } from "./layouts/favourites";
-import { category as CategoryPage } from "./layouts/category";
+import { Home as Home } from "./layouts/home";
+import { Search as SearchPage } from "./layouts/search";
+import { SingleGif as GifPage } from "./layouts/single-gif";
+import { Favourites as Favourites } from "./layouts/favourites";
+import { Category as CategoryPage } from "./layouts/category";
 import GifProvider from "./context/gif-context";
+
 const router = createBrowserRouter([
   {
     element: <AppLayout />,

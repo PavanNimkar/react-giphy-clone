@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { HiDotsVertical } from "react-icons/hi";
@@ -9,6 +9,16 @@ export const Header = () => {
   const [categories, setCategories] = useState([]);
   const { gif_value, filter, setFilter, favourites } = GifState();
   const [showCategories, setShowCategories] = useState(false);
+
+  const fetchGifCategories = async () => {
+    const { data } = await gif_value.categories();
+    setCategories(data);
+  };
+
+  useEffect(() => {
+    fetchGifCategories();
+  }, []);
+
   return (
     <nav>
       <div className="relative gap-4 flex items-center justify-between">
@@ -24,9 +34,18 @@ export const Header = () => {
         </Link>
         <div className="font-bold text-md flex gap-2 items-center">
           {/* rendering categories */}
-          <Link className="px-4 py-1 hover:bg-gradient-to-r from-teal-400 via-blue-500 to-pink-500 border-b-4 hidden lg:block">
-            Reactions
-          </Link>
+          {categories?.slice(0, 5)?.map((category) => {
+            return (
+              <Link
+                key={category.name}
+                to={`/${category.name_encoded}`}
+                className="px-4 py-1 hover:bg-gradient-to-r from-teal-400 via-blue-500 to-pink-500 border-b-4 hidden lg:block"
+              >
+                {category.name}
+              </Link>
+            );
+          })}
+
           <button onClick={() => setShowCategories(!showCategories)}>
             <HiDotsVertical
               size={35}
