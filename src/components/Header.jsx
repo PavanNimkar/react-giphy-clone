@@ -7,11 +7,11 @@ import { GifState } from "../context/gif-context";
 
 export const Header = () => {
   const [categories, setCategories] = useState([]);
-  const { gif_value, filter, setFilter, favourites } = GifState();
+  const { giphyResponse, filter, setFilter, favourites } = GifState();
   const [showCategories, setShowCategories] = useState(false);
 
   const fetchGifCategories = async () => {
-    const { data } = await gif_value.categories();
+    const { data } = await giphyResponse.categories();
     setCategories(data);
   };
 
