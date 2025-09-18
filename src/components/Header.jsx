@@ -4,6 +4,7 @@ import "../App.css";
 import { HiDotsVertical } from "react-icons/hi";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { GifState } from "../context/gif-context";
+import GifSearch from "./GifSearch";
 
 export const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -78,6 +79,7 @@ export const Header = () => {
         )}
       </div>
       {/* search */}
+      <GifSearch />
     </nav>
   );
 };
