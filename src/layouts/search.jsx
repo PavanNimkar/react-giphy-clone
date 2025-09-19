@@ -30,7 +30,7 @@ export const Search = () => {
       <h2 className="text-5xl pb-3 font-extrabold">{query}</h2>
       <FilterGifs alignLeft={true} />
       {searchResults.length > 0 ? (
-        <div className="columns-2 md:columns-3 lg:columns-4 xl:column-5 gap-2">
+        <div className="columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-2">
           {searchResults.map((gif) => {
             return <Gif gif={gif} key={gif.id} />;
           })}
