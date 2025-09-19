@@ -14,7 +14,6 @@ export const Header = () => {
   const fetchGifCategories = async () => {
     const { data } = await giphyResponse.categories();
     setCategories(data);
-    console.log(data);
   };
 
   useEffect(() => {
